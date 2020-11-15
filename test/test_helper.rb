@@ -4,6 +4,12 @@ require 'rails/test_help'
 require "minitest/reporters"
 Minitest::Reporters.use!
 
+require 'simplecov'
+SimpleCov.start
+
+require 'codecov'
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
+
 class ActiveSupport::TestCase
   fixtures :all
 
