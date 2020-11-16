@@ -5,8 +5,3 @@ script: bundle exec rake
 rvm: 2.7
 
 ### Produce Coverage Reports
-
-> Add to your `Gemfile`
-
-```ruby
-gem 'codecov', :require => false, :group => :test
