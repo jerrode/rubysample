@@ -1,19 +1,19 @@
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require "minitest/reporters"
 Minitest::Reporters.use!
 
-require 'simplecov'
-SimpleCov.start
-
-require 'codecov'
-SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 class ActiveSupport::TestCase
   fixtures :all
 
-  # Returns true if a test user is logged in....................
+#returns true
   def is_logged_in?
     !session[:user_id].nil?
   end
@@ -33,3 +33,4 @@ class ActionDispatch::IntegrationTest
                                           remember_me: remember_me } }
   end
 end
+
