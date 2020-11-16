@@ -25,7 +25,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "name should not be too long again" do
+  test "name should not be too long again make sure" do
     @user.name = "a" * 55
     assert_not @user.valid?
   end
