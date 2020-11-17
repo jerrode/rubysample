@@ -7,7 +7,7 @@
 #   SimpleCov.formatter = SimpleCov::Formatter::Codecov
 # end
 
-#require 'test/unit'
+require 'test/unit'
 require 'mocha/setup'
 
 require 'awesome'
